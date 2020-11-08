@@ -7,6 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.winner.WinnerActivity">
 
-    <!-- TODO -->
+    <TextView
+        android:id="@+id/txtWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/paddingX3"
+        android:text="@string/txtWinner"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/pokemonWin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingX3"
+        app:layout_constraintBottom_toTopOf="@+id/nameWinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWinner"
+        app:srcCompat="@drawable/pikachu"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/nameWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingX3"
+        android:text="@string/pokemonPikachu"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

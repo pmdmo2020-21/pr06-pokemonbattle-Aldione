@@ -7,6 +7,117 @@
     android:layout_height="match_parent"
     tools:context=".ui.battle.BattleActivity">
 
-    <!-- TODO -->
+    <LinearLayout
+        android:id="@+id/selectTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/green_50"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineBattle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/pokemonFirst"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/paddingX3"
+            android:src="@drawable/gyarados"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/nameFirstPokemon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:text="@string/pokemonGyarados"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectMiddle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_50"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineBattle2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectTop">
+
+        <TextView
+            android:id="@+id/nameSecondPokemon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:layout_gravity="center"
+            android:text="@string/pokemonGyarados"
+            android:gravity="center" />
+
+        <ImageView
+            android:padding="@dimen/paddingX3"
+            android:id="@+id/pokemonSecond"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/gyarados"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBattle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBattle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/imagenVersus"
+        android:layout_width="96dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selectMiddle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selectTop"
+        app:srcCompat="@drawable/versus"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/paddingX3"
+        android:layout_marginEnd="@dimen/paddingX3"
+        android:text="@string/txtBattle"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnBattle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectMiddle" />
+
+    <Button
+        android:id="@+id/btnBattle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingX3"
+        android:text="@string/btnBattle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

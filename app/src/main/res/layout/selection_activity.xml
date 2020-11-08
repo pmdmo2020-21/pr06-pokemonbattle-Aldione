@@ -7,6 +7,163 @@
     android:layout_height="match_parent"
     tools:context=".ui.selection.SelectionActivity">
 
-    <!-- TODO -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineSelection1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineSelection2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineSelection3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <ImageView
+        android:id="@+id/imagenFirstPokemonTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedFirstPokemonTop"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bulbasur"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedFirstPokemonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonBulbasur"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineSelection2"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagenSecondPokemonTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedSecondPokemonTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/giratina"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedSecondPokemonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonGiratina"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineSelection2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1" />
+
+    <ImageView
+        android:id="@+id/imagenFirstPokemonMid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedFirstPokemonMid"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedFirstPokemonTop"
+        app:srcCompat="@drawable/cubone"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedFirstPokemonMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonCubone"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineSelection3"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagenSecondPokemonMid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedSecondPokemonMid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintTop_toBottomOf="@+id/guideLineSelection2"
+        app:srcCompat="@drawable/gyarados"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedSecondPokemonMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonGyarados"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineSelection3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1" />
+
+    <ImageView
+        android:id="@+id/imagenFirstPokemonBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedFirstPokemonBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideLineSelection3"
+        app:srcCompat="@drawable/feebas"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedFirstPokemonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonFeebas"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagenSecondPokemonBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/paddingSelect"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/selectedSecondPokemonBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1"
+        app:layout_constraintTop_toTopOf="@+id/guideLineSelection3"
+        app:srcCompat="@drawable/pikachu"
+        tools:ignore="ContentDescription" />
+
+    <RadioButton
+        android:id="@+id/selectedSecondPokemonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonPikachu"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLineSelection1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
